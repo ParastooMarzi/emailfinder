@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client'; // Import ReactDOM
+import { createRoot } from 'react-dom/client'; // Import createRoot from react-dom/client
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import App from './App'; // Import your main App component
 import SignIn from './SignIn';
@@ -76,7 +76,7 @@ const blogPosts = [
   },
 ];
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById('root')).render( // Use createRoot instead of ReactDOM.createRoot
   <React.StrictMode>
     <Router>
       <Routes>
