@@ -22,3 +22,10 @@ code:not([class*='language-']):after {
 code[class*='language-'] {
   padding: 0;
 }
+
+.gradient-red-to-orange {
+  background-image: linear-gradient(to right, #FF0000, #FFA500);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

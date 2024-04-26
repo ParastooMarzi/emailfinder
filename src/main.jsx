@@ -1,5 +1,5 @@
 import React from 'react';
-import { createRoot } from 'react-dom/client'; // Import createRoot from react-dom/client
+import ReactDOM from 'react-dom/client'; // Import ReactDOM
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import App from './App'; // Import your main App component
 import SignIn from './SignIn';
@@ -7,8 +7,14 @@ import Blog from './Blog';
 import SignUp from './SignUp';
 import ReadMore from './ReadMore';
 import ContactUs from './ContactUs';
-
 import './index.css';
+import SearchDomain from './SearchDomain';
+import SearchLeak from './SearchLeak';
+import SearchLogs from './SearchLogs';
+import Pricingin from './Pricingin';
+import Profile from './Profile';
+import Indexed from './Indexed';
+
 const blogPosts = [
   {
     id: 1,
@@ -76,7 +82,7 @@ const blogPosts = [
   },
 ];
 
-createRoot(document.getElementById('root')).render( // Use createRoot instead of ReactDOM.createRoot
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Router>
       <Routes>
@@ -87,6 +93,12 @@ createRoot(document.getElementById('root')).render( // Use createRoot instead of
         <Route path='/blog' element={<Blog />} />
         <Route path='/readmore/:id' element={<ReadMore blogPosts={blogPosts} />} />
         <Route path='/contactus' element={<ContactUs />} />
+        <Route path='/domain-search' element={<SearchDomain />} />
+        <Route path='/leak-search' element={<SearchLeak />} />
+        <Route path='/logs-search' element={<SearchLogs />} />
+        <Route path='/pricing' element={<Pricingin />} />
+        <Route path='/profile' element={<Profile />} />
+        <Route path='/indexed' element={<Indexed />} />
       </Routes>
     </Router>
   </React.StrictMode>,

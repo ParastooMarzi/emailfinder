@@ -10,10 +10,14 @@ const SignIn = () => {
     navigate("/home");
   };
 
+  const redirectToPannel = () => {
+    navigate("/domain-search");
+  };
+
   return (
     <>
       <Navbar />
-      <div className="flex justify-center items-center mt-12 bg-gray-100">
+      <div className="flex justify-center items-center mt-12 bg-gray-50">
         <div className="bg-white rounded-lg shadow-md p-8 w-full max-w-md">
           <h2 className="text-3xl font-semibold mb-6 text-center">Welcome to FindEmail!</h2>
           <p className="text-gray-500 text-center mb-6">Please sign in to your account and start the adventure.</p>
@@ -59,6 +63,7 @@ const SignIn = () => {
                 Cancel
               </button>
               <button
+                onClick={redirectToPannel}
                 type="submit"
                 className="inline-flex justify-center items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-gradient-to-r from-red-500 to-red-800 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
               >
@@ -66,7 +71,7 @@ const SignIn = () => {
               </button>
             </div>
           </form>
-          <p className="text-sm text-gray-500 text-center">New on our platform? <a href="/signup" className="text-red-500 hover:underline">Create an account</a></p>
+          <p className="text-sm text-gray-500 text-center">New on our platform? <a href="#" className="text-red-500 hover:underline">Create an account</a></p>
         </div>
       </div>
       <div className="max-w-7xl mx-auto pt-20 px-6">
